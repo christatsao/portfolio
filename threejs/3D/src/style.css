@@ -2,12 +2,34 @@
 
 :root {
   --dark-bg: rgba(15, 15, 15, 0.95);
-  --spacing: 350px;
+  --spacing: 3rem;
 
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
   font-style: normal;
 }
+
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+    padding: 60px 1rem;
+  }
+
+  header {
+    grid-column: 1 / -1;
+    font-size: 1.75rem;
+    padding: 1.5rem 1rem;
+    margin-bottom: 2rem;
+  }
+
+  section {
+    grid-column: 1 / -1;
+    font-size: 1rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
+}
+
 
 .job {
   background: rgba(0, 0, 0, 0.223)
