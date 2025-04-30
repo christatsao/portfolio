@@ -1,12 +1,11 @@
 import './style.css'
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
-import { FontLoader } from 'three/examples/jsm/loaders/FontLoader.js';
-import { TextGeometry } from 'three/addons/geometries/TextGeometry.js';
-
+// import { FontLoader } from 'three/examples/jsm/loaders/FontLoader.js';
+// import { TextGeometry } from 'three/addons/geometries/TextGeometry.js';
 
 // in threejs, you always need a scene, a camera, anda  renderer
-// scene == container that holds all of objects
+// scene == cnontainer that holds all of objects
 
 const scene = new THREE.Scene();
 
@@ -60,7 +59,7 @@ const controls = new OrbitControls(camera, renderer.domElement);
 
 function addStar() {
   const geometry = new THREE.SphereGeometry(0.25, 24, 24); //to make a star, we combine a geometry and a material to become a mesh, and then add it to the scene
-  const material = new THREE.MeshStandardMaterial({ color: 0xffffff });
+  const material = new THREE.MeshStandardMaterial({ color: 0xfff });
   const star = new THREE.Mesh(geometry, material);
 
   const [x, y, z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread(100)); // here we are destructuring an array  and assigning values to x y and z as three random integers [-50,50]
@@ -71,7 +70,7 @@ function addStar() {
 
 Array(200).fill().forEach(addStar); // here we are just calling addStar 200 times (easier than a for loop)
 
-const spaceTexture = new THREE.TextureLoader().load('../assets/images/space.jpg');
+const spaceTexture = new THREE.TextureLoader().load('assets/images/space.jpg');
 scene.background = spaceTexture;
 
 
