@@ -70,7 +70,8 @@ function addStar() {
 
 Array(200).fill().forEach(addStar); // here we are just calling addStar 200 times (easier than a for loop)
 
-const spaceTexture = new THREE.TextureLoader().load('assets/images/space.jpg');
+const spaceTexture = new THREE.TextureLoader().load('images/space.jpg');
+console.log(spaceTexture)
 scene.background = spaceTexture;
 
 
