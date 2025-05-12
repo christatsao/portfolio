@@ -36,9 +36,6 @@
   background: rgba(0, 0, 0, 0.223)
 }
 
-.project {
-  background: rgba(0, 0, 0, 0.223)
-}
 
 main {
   width: 100vw;
@@ -106,4 +103,29 @@ canvas {
   /* optional rounded corners */
   object-fit: cover;
   /* crop/scale image to fill */
+}
+
+.project {
+  background: rgba(0, 0, 0, 0.223)
+}
+
+.header {
+  background: rgba(0, 0, 0, 0.223)
+}
+
+.profile {
+  background: rgba(0, 0, 0, 0.223)
+}
+
+.project img {
+  width: 100%;
+  /* span full width of its container */
+  height: auto;
+  /* keep its intrinsic aspect ratio */
+  display: block;
+  /* remove inline‑img whitespace */
+  border-radius: 4px;
+  /* match your other cards’ rounding */
+  object-fit: cover;
+  /* scale & crop to fill (no letter‑boxing) */
 }
