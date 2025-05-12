@@ -1,7 +1,7 @@
 @import url("https://use.typekit.net/jmk3xov.css");
 
 :root {
-  --dark-bg: rgba(15, 15, 15, 0.95);
+  --dark-bg: rgba(15, 15, 15, 0.058);
   --spacing: 3rem;
 
   font-family: brandon-grotesque, sans-serif;
@@ -11,7 +11,7 @@
 
 @media (max-width: 768px) {
   main {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     padding: 60px 1rem;
   }
 
@@ -28,10 +28,15 @@
     padding: 1rem;
     margin-bottom: 2rem;
   }
+
 }
 
 
 .job {
+  background: rgba(0, 0, 0, 0.223)
+}
+
+.project {
   background: rgba(0, 0, 0, 0.223)
 }
 
@@ -79,4 +84,26 @@ canvas {
   position: fixed;
   top: 0;
   left: 0;
+}
+
+/* Grid container */
+.image-grid {
+  display: grid;
+  /* auto‑fill as many 200px columns as will fit, each at least 200px wide */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 16px;
+  /* space between items */
+  padding: 16px;
+  /* optional padding around the grid */
+}
+
+/* Make images fill their grid cell and keep aspect ratio */
+.image-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  /* optional rounded corners */
+  object-fit: cover;
+  /* crop/scale image to fill */
 }
